@@ -5,7 +5,9 @@ export const fetchSkills = async () => {
   const data = await res.json();
   const skills: Skill[] = data.skills;
 
+  const notIncluded = ['ADA', 'Python'];
+
   // console.log("fetching", skills);
 
-  return skills;
+  return skills.filter((skill) => !notIncluded.includes(skill.title));
 };

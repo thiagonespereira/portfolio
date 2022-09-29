@@ -30,7 +30,7 @@ export default function ContactMe({}: Props) {
       </h3>
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have just what you need.{" "}
           <span className="underline decoration-[#F7AB0A]/50">Let's talk.</span>
         </h4>
@@ -38,17 +38,17 @@ export default function ContactMe({}: Props) {
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+55 (12) 9-8275-0322</p>
+            <p className="text-xl md:text-2xl">+55 (12) 9-8275-0322</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">tlpereir@gmail.com</p>
+            <p className="text-xl md:text-2xl">tlpereir@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Sao Paulo, Brazil</p>
+            <p className="text-xl md:text-2xl">Sao Paulo, Brazil</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export default function ContactMe({}: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col md:flex-row md:space-x-2">
             <input
               {...register("name")}
               className="contactInput"

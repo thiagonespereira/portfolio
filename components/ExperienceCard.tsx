@@ -11,7 +11,7 @@ type Props = {
 export default function ExperienceCard({ experience }: Props) {
   return (
     <article
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px]
+      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[100vw]
     md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40
     cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
@@ -33,14 +33,14 @@ export default function ExperienceCard({ experience }: Props) {
         alt="Company Logo"
       />
 
-      <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
-        <p className="font-bold text-2xl mt-1">{experience.company}</p>
-        <div className="flex space-x-2 my-2">
+      <div className="px-10 md:px-10">
+        <h4 className="text-2xl md:text-4xl font-light">{experience.jobTitle}</h4>
+        <p className="font-bold text-xl md:text-2xl mt-1">{experience.company}</p>
+        <div className="flex flex-wrap justify-center md:justify-start space-x-2 my-2">
           {experience.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-10 w-10 rounded-full"
+              className="h-5 w-5 md:h-10 md:w-10 rounded-full"
               src={urlFor(technology.image).url()}
               alt="Tech Logo"
             />
@@ -51,7 +51,7 @@ export default function ExperienceCard({ experience }: Props) {
           {experience.isCurrentlyWorkingHere ? "Present" : experience.dateEnded}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg max-h-96 overflow-y-scroll pr-5
+        <ul className="list-disc space-y-4 ml-5 text-sm md:text-lg max-h-96 overflow-y-scroll pr-5
         scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>

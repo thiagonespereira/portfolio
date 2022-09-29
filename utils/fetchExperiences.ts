@@ -9,5 +9,5 @@ export const fetchExperiences = async () => {
 
   // console.log("fetching", experiences);
 
-  return experiences;
+  return experiences.sort((a, b) => a.dateStarted > b.dateStarted ? -1 : 1);
 };

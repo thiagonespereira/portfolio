@@ -33,16 +33,16 @@ export default function About({ pageInfo }: Props) {
         }}
         viewport={{ once: true }}
         src={urlFor(pageInfo.profilePic).url()}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-95 md:h-95"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-24 h-24 rounded-full object-cover md:rounded-lg md:w-96 md:h-96"
       />
 
-      <div className="space-y-20 px-0 md:px-10">
+      <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo.backgroundInformation}</p>
+        <p className="text-sm md:text-base">{pageInfo.backgroundInformation}</p>
       </div>
     </motion.div>
   );
