@@ -73,7 +73,7 @@ const Home = ({ experiences, pageInfo, projects, skills, socials }: Props) => {
           <div className="flex items-center justify-center">
             <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://s3.sa-east-1.amazonaws.com/remotar-assets-prod/company-profile-pictures/cl7upttfz009h04yw81mr8tnd.jpg"
+              src="https://cdn.sanity.io/images/pmzyk9xn/production/2320d37156c7f4ad40eef72eb765173c4f1dddc1-893x874.png"
               alt=""
             />
           </div>
